@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+
+
+{% load static %}
+{% block content %}
+
+    <body style = "background: #d3d3d3;">
+        
+      <div class="main">
+        <div class="container">
+            <h2 style="background: #646464;color:#fff;width: 200px;font-size: 24px;padding: 5px;height: 40px;">GRE Quant</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/Gre1.JPG' %}" width="42" height="152">
+                        
+                            <form action="{%url 'download_1' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download"> 
+                              
+                            </form>
+                        
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Manhattan Practice Problems</h3>
+                        <h5 style="color:black">Quant</h5>
+                        
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/Gre2.JPG' %}" width="42" height="152">
+                        
+                        <form action="{%url 'download_2' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download"> 
+                            </form>
+
+                        
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Manhattan Word Problem</h3>
+                        <h5 style="color:black">Quant</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/Gre3.JPG' %}" width="42" height="152">
+                        
+                        <form action="{%url 'download_3' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download">
+                            </form>
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Word_Power</h3>
+                        <h5 style="color:black">Vocabulary</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/Gre4.JPG' %}" width="42" height="152">
+                        
+                        <form action="{%url 'download_4' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download">
+                            </form>
+
+                        
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Gre_Test_Book</h3>
+                        <h5 style="color:black">Quant/Vocab</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 style="background: #646464;color:#fff;width: 200px;font-size: 24px;padding: 5px;height: 40px;">GRE Vocab</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/Gre3.JPG' %}" width="42" height="152">
+                        
+                            <form action="{%url 'download_1' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download">
+                            </form>
+                        
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Manhattan 5LBs</h3>
+                        <h5 style="color:black">Quant/Vocab</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/Gre2.JPG' %}" width="42" height="152">
+                        
+                        <form action="{%url 'download_2' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download">
+                            </form>
+
+                        
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Manhattan Word Problem</h3>
+                        <h5 style="color:black">Quant</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/Capture.PNG' %}" width="42" height="152">
+                        
+                        <form action="{%url 'download_3' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download">
+                            </form>
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Word_Power</h3>
+                        <h5 style="color:black">Vocabulary</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <img src="{% static 'Images/a.PNG' %}" width="42" height="152">
+                        
+                        <form action="{%url 'download_4' %}" method="post">
+                             {% csrf_token %}
+                              <input class =" btn btn-success offset-1 mt-2"type = "Submit" value="Download">
+                            </form>
+
+                        
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3 style="color:black">Gre_Test_Book</h3>
+                        <h5 style="color:black">Quant/Vocab</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    {% endblock %}

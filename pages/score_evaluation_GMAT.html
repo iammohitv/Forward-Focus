@@ -1,0 +1,215 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Score Evaluation</title>
+    <link rel="stylesheet" href="{% static 'css/style_university.css' %}"></link>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
+
+    <div class="menu-bar">
+        <nav>
+          <img class="logo" src="{% static 'Images/LOGO_SE.PNG' %}">
+        <ul>
+          <li><a href="{%url 'home' %}">Home </li>
+          <li class="active"><a href="#">Evaluation <i class="fa fa-caret-down"></i></a>
+            <div class="sub-menu-1">
+              <ul>
+                <li><a href="{%url 'profile' %}">Profile Evaluation</a></li>
+						<li><a href="{%url 'score_evaluation_page' %}">Marks Evaluation</a></li>
+						<li><a href="{%url 'greuni' %}">University Finder</a></li>
+
+              </ul>
+            </div>
+              
+          </li>
+          <li ><a href="#">Examinations <i class="fa fa-caret-down"></i></a>
+          <div class="sub-menu-1">
+              <ul>
+                <li><a href="{%url 'grehome' %}">GRE</a></li>
+							<li><a href="{%url 'cathome' %}">CAT</a></li>
+							<li><a href="{%url 'gatehome' %}">GATE</a></li>
+							<li><a href="{%url 'ieltshome' %}">IELTS</a></li>
+							<li><a href="{%url 'toeflhome' %}">TOEFL</a></li>
+							<li><a href="{%url 'gmathome' %}">GMAT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Resources <i class="fa fa-caret-down"></i></a>
+          <div class="sub-menu-1">
+              <ul>
+                <li><a href="{%url 'gre_resources' %}">GRE</a></li>
+						<li><a href="{%url 'resources_cat' %}">CAT</a></li>
+						<li><a href="{%url 'resources_gate' %}">GATE</a></li>
+						<li><a href="{%url 'resources_ielts' %}">IELTS</a></li>
+						<li><a href="{%url 'resources_toefl' %}">TOEFL</a></li>
+						<li><a href="{%url 'resources_gmat' %}">GMAT</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li><a href="{%url 'aboutus' %}">About Us </a></li>
+          <li><a href="#">{{user.username}} <i class="fa fa-caret-down"></i></a>
+          <div class="sub-menu-1">
+              <ul>
+                <li><a href="{%url 'myprofile' %}">My Profile</a></li>
+                <li><a href="{%url 'index' %}">Logout</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+         </div>
+    
+  </head>
+  <body>
+     <div class ="main">
+           
+           <div class="score-bar ">
+                                
+                <nav>
+            <ul class="list">
+              <li ><a href="{%url 'score_evaluation_page' %}">GRE</a></li>
+              <li ><a href="{% url 'score_evaluation_cat' %}">CAT</a></li> 
+              <li class="active"><a href="{%url 'score_evaluation_gmat' %}"> GMAT</a></li>
+              <li><a href="{% url 'score_evaluation_gate' %}">GATE</a></li>            
+
+              </ul>
+          </nav>
+        </div>
+
+        <div class= "score-evaluation" >
+        <h1 style="font-size: 32px; padding-left: 60px"> Know Your Score in just two steps</h1>
+           <h1 style="padding-top: 15px; font-size: 22px; padding-left: 90px"> Step 1: Give GMAT Based Standard Tests</h1>  
+       <div class="blog-card" >
+         
+      <input type="radio" name="select" id="tap-1" checked>
+      <input type="radio" name="select" id="tap-2">
+      <input type="radio" name="select" id="tap-3">
+      <input type="radio" name="select" id="tap-4">
+      <input type="checkbox" id="imgTap">
+      <div class="sliders">
+        <label for="tap-1" class="tap tap-1"></label>
+        <label for="tap-2" class="tap tap-2"></label>
+        <label for="tap-3" class="tap tap-3"></label>
+         <label for="tap-4" class="tap tap-4"></label>
+      </div>
+      <div class="inner-part">
+        <label for="imgTap" class="img">
+          <img class="img-1" src="{% static 'Images/goodluck.jpg' %}">
+        </label>
+        <div class="content content-1">
+          
+          <div class="title">GMAT MOCK TEST 1</div>
+          <div class="text">
+            
+            <a href=""> Give Test</a></li>
+            
+          </div>
+           <div class="text1">
+             <a href="">Answer-Key</a></li>
+          </div>
+          <div class="form-style-7">
+          <form action="{%url 'submit_score1_GRE' %}", method='POST'>
+            {% csrf_token %}
+            <input type="number" name="score1" placeholder="Enter Score ">
+             <a href=""><button>Submit Score 1</button></a>
+           </form>
+         </div>
+        </div>
+      </div>
+      <div class="inner-part">
+        <label for="imgTap" class="img">
+          <img class="img-2" src="{% static 'Images/goodluck.jpg' %}">
+        </label>
+        <div class="content content-2">
+          
+          <div class="title">GMAT MOCK TEST 2</div>
+          <div class="text">
+            
+            <a href=""> Give Test</a></li>
+            
+          </div>
+           <div class="text1">
+             <a href="">Answer-Key</a></li>
+          </div>
+          <div class="form-style-7">
+           <form action="{%url 'submit_score2_GRE' %}", method='POST'>
+                {% csrf_token %}
+            <input type="number" name="score2" placeholder="Enter Score ">
+             <button>Submit Score 2</button>
+           </form>
+         </div>
+        </div>
+      </div>
+      <div class="inner-part">
+        <label for="imgTap" class="img">
+          <img class="img-3" src="{% static 'Images/goodluck.jpg' %}">
+        </label>
+        <div class="content content-3">
+         
+          <div class="title">GMAT MOCK TEST 3</div>
+          <div class="text">
+            
+            <a href=""> Give Test</a></li>
+            
+          </div>
+           <div class="text1">
+             <a href="">Answer-Key</a></li>
+          </div>
+          <div class="form-style-7">
+          <form action="{%url 'submit_score3_GRE' %}", method='POST'>
+              {% csrf_token %}
+            <input type="number" name="score3" placeholder="Enter Score ">
+             <button>Submit Score 3</button>
+           </form>
+         </div>
+        </div>
+      </div>
+      <div class="inner-part">
+        <label for="imgTap" class="img">
+          <img class="img-4" src="{% static 'Images/goodluck.jpg' %}">
+        </label>
+        <div class="content content-4">
+          
+          <div class="title">GMAT MOCK TEST 4</div>
+          <div class="text">
+            
+            <a href=""> Give Test</a></li>
+            
+          </div>
+           <div class="text1">
+             <a href="">Answer-Key</a></li>
+          </div>
+          <div class="form-style-7">
+         <form action="{%url 'submit_score4_GRE' %}", method='POST'>
+                  {% csrf_token %}
+            <input type="number" name="score4" placeholder="Enter Score ">
+             <button>Submit Score 4</button>
+
+           </form>
+         </div>
+        </div>
+      </div>
+        
+    </div>
+         
+       </div>
+
+       <div class= "score-evaluation2">
+        <h1 style="font-size: 22px; left: 500px; top: 420px; "> Step 2: Evaluate your Score</h1>
+      
+       <div class="form-style-8">
+
+        
+      <form>
+      <fieldset>
+     
+      <input type="submit" value="Know Your Score" />
+       <input type="number" name="field1" placeholder="Your Estimated Score is:">
+      </fieldset>
+      </form>
+      </div>
+      </div>
+    </div>
+    </body>

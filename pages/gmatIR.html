@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %} GREhome {% endblock %}
+{% block content %}
+	         <div class="gre-bar ">
+	                              
+	            	<nav>
+						<ul class="list">
+							<li  ><a href="{%url 'gmathome' %}"><i class="fa-caret-down"></i> GMAT</a></li> 
+							<li class="active" ><a href="{%url 'gmatir' %}"><i class="fa fa-align-left"></i> GMAT Integrated Reasoning</a></li> 
+							<li ><a href="{%url 'gmatquant' %}"><i class="fa fa-calculator"></i> GMAT Quant Reasoning</a></li>
+							<li><a href="{%url 'gmatverbal' %}"><i class="fa fa-cube"></i> <span>GMAT Verbal Reasoning</span></a></li>
+							<li><a href="{%url 'gmatawa' %}"><i class="fa fa-cube"></i> <span>GMAT AWA</span></a></li>						
+
+					    </ul>
+					</nav>
+				</div>
+		
+        	 <div class="about-gre">
+         	    <h3 class="mt-0"> GMAT Integrated Reasoning</h3>
+         	         <p>
+         	         	The Integrated Reasoning section of the GMAT™ exam measures how well you integrate data to solve complex problems. With your target business schools interested in the development of future business leaders, one of the most important skills you can demonstrate is your ability to take in large amounts of data and make sound decisions. Specifically, the Integrated Reasoning section tests your ability to:
+         	         </p>
+                   <li>Synthesize information presented in graphics, text, and numbers.</li>
+                   <li>Evaluate relevant information from different sources.</li>
+                   <li>Organize information to see relationships and to solve multiple, interrelated problems.</li>
+                   <li>Combine and manipulate information from multiple sources to solve complex problems.</li>
+         	         <p>
+         	         The Integrated Reasoning section contains four question types for a total of 12 questions—most requiring multiple responses. You will have 30 minutes to complete it.
+         	         </p>
+                   <h3>Four Types of Questions in the Integrated Reasoning Section</h3>
+         	         <p>
+         	         	What’s the takeaway? A high score on the GMAT will have a direct, positive impact on your graduate or Management school application.
+         	         </p>
+         	    <h3>What is tested on GMAT?</h3>
+         	          <p>There are four types of questions in the Integrated Reasoning Section—Multi-Source Reasoning, Table Analysis, Graphics Interpretation, and Two-Part Analysis. The questions involve both quantitative and verbal reasoning, either separately or in combination. There are two special features of this section: many questions require more than one response, and you will be able to use an online calculator with basic functions to answer the questions. Because the questions are designed to test your ability to integrate data to solve complex problems, you must answer all responses to a question correctly; no partial credit will be given.
+         	          </p>
+         	          <p>
+         	         For each Integrated Reasoning question type, you can sample multiple questions using the links below, and click the button at the bottom of the sample question screen to reveal the correct response.
+         	          </p>
+                    <ol>
+                      <li>Multi Source Reasoning
+                        <p>Measures your ability to examine data from multiple sources text passages, tables, graphics, or some combination of the three—and to analyze each source of data carefully to answer multiple questions. Some questions will require you to recognize discrepancies among different sources of data. Others will ask you to draw inferences, and still others may require you to determine whether data is relevant.</p></li>
+                      <li>Table Analysis <p>Measures your ability sort and analyze a table of data, similar to a spreadsheet, in order to determine what information is relevant or meets certain conditions.</p></li>
+                      <li>Graphics Interpreatation<p>Measures your ability to interpret the information presented in a graph or other graphical image (scatter plot, x/y graph, bar chart, pie chart, or statistical curve distribution) to discern relationships, and make inferences.</p></li>
+                      <li>Two-Part Analysis<p>Measures your ability to solve complex problems. They could be quantitative, verbal, or some combination of both. The format is intentionally versatile to cover a wide range of content. Your ability to evaluate trade-offs, solve simultaneous equations, and discern relationships between two entities is measured.</p></li>
+                    </ol>
+         	     			
+         	   
+         </div>
+{% endblock %}

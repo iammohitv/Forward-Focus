@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %} GREhome {% endblock %}
+{% block content %}
+	         <div class="gre-bar ">
+	                              
+	            	<nav>
+						<ul class="list">
+							<li  ><a href="{%url 'gmathome' %}"><i class="fa-caret-down"></i> GMAT</a></li> 
+							<li ><a href="{%url 'gmatir' %}"><i class="fa fa-align-left"></i> GMAT Integrated Reasoning</a></li> 
+							<li  class="active"><a href="{%url 'gmatquant' %}"><i class="fa fa-calculator"></i> GMAT Quant Reasoning</a></li>
+							<li><a href="{%url 'gmatverbal' %}"><i class="fa fa-cube"></i> <span>GMAT Verbal Reasoning</span></a></li>
+							<li><a href="{%url 'gmatawa' %}"><i class="fa fa-cube"></i> <span>GMAT AWA</span></a></li>						
+
+					    </ul>
+					</nav>
+				</div>
+		
+        	 <div class="about-gre">
+         	    <h3 class="mt-0">About GMAT</h3>
+         	         <p>
+         	         The Quantitative Reasoning section of the GMAT™ exam measures your ability to reason mathematically, solve quantitative problems, and interpret graphic data. It consists of 31 multiple-choice questions. You will have 62 minutes to complete it.
+         	         </p>
+                   <h3> Two Types of Questions in the Quantitative Section</h3>
+         	         <p>
+         	         There are two types of questions in the Quantitative Section – Problem Solving and Data Sufficiency. Both types of questions require some knowledge of arithmetic, elementary algebra and commonly known concepts of geometry. Rest assured that the difficulty of the questions stems from the logic and analytical skills required, not the underlying math skills. Note that you cannot use a calculator while working on the Quantitative section.
+         	         </p>
+                   <h3>Problem Solving</h3>
+         	         <p>
+         	         Measures your ability to use logic and analytical reasoning to solve quantitative problems.
+         	         </p>
+                   <p>You solve the problem and indicate the best of five answer choices.You solve the problem and indicate the best of five answer choices.</p>
+         	    <h3>Data Sufficiency</h3>
+         	          <p>Measures your ability to analyze a quantitative problem, recognize which data is relevant, and determine at what point there are enough data to solve the problem.
+         	          </p>
+         	          <p>
+         	          You will be given a problem that consists of a question and two statements. Using the data in the statements, plus your knowledge of math and everyday facts, you decide whether you have enough data in the statement to answer the question asked.
+         	          </p>
+         	     			
+         	    
+         	    <h3> What is a good GMAT score? </h3>
+         	    	<p>
+         	    		A "decent" GMAT score is just in respect to the MBA of Masters projects to which you are applying! You should do some exploration on the schools to which you need to send your scores and set yourself practical objectives in light of the normal scores acknowledged by those projects. If you can find the mean or average GMAT score of admitted applicants, you’ll be able to determine what GMAT score will make you a competitive applicant. <br><br>Top level schools will generally be searching for a score in the 90th percentile or above (eg Wharton has a normal GMAT score of 713; Harvard 708; INSEAD 702; and London Business School 680). <br><br>The general GMAT score ranges from 200 to 800. The normal GMAT score among test-takers worldwide is 540. 66% of test takers score in the vicinity of 400 and 600. <br><br>The Analytical Writing Assessment is scored from 0 to 6 in half-point increments, and the mean score is 3.5-4. A score for the Integrated Reasoning segment, going from 1 to 8, with the mean score as 4.29.
+				<br><br>The average quantitative GMAT score is 38.91. As you’ll see in the chart, you need top math scores to score above the 80th percentile.
+         	    	</p> <br>
+         	    	 <table class="gmat-test-score-quant">
+         	        	<thead >
+         	        		<tr>
+         	        			<th>Percentile</th>
+         	        			<th>Scaled GMAT Quantitative Score(2013-2018)</th>
+         	       			</tr>
+         	       		</thead>
+         	       		<tbody>
+         	       			<tr>
+         	       				<td>Top 10% of all test takers</td>
+         	       				<td>50 and above</td>
+         	       			</tr>
+         	       			<tr>
+         	   					<td>Top 25% of all test takers</td>
+         	   					<td>48 and above</td>
+         	   				</tr>
+         	   				<tr>
+             					<td>Top 50% of all test takers</td>
+             					<td>44 and above</td>
+             				</tr>
+             				<tr>
+       	       					<td>Below 50th percentile of all test takers</td>
+       	       					<td>43 and below</td>
+       	       				</tr>
+
+   
+       	        		</tbody>
+       	 	   		</table>
+				<br><br>The average verbal GMAT score is 26.8, significantly lower than the average quantitative score. Because fewer people score highly on the Verbal section, the GMAT score percentiles are less competitive. A score of 45 and up falls in the 99th percentile in Verbal.<br><br>
+                    <table class="gmat-test-score-verbal">
+         	        	<thead>
+         	        		<tr>
+         	        			<th>Percentile</th>
+         	        			<th>Scaled GMAT Verbal Score(2013-2018)</th>
+         	       			</tr>
+         	       		</thead>
+         	       		<tbody>
+         	       			<tr>
+         	       				<td>Top 10% of all test takers</td>
+         	       				<td>40 and above</td>
+         	       			</tr>
+         	       			<tr>
+         	   					<td>Top 25% of all test takers</td>
+         	   					<td>35 and above</td>
+         	   				</tr>
+         	   				<tr>
+             					<td>Top 50% of all test takers</td>
+             					<td>28 and above</td>
+             				</tr>
+             				<tr>
+       	       					<td>Below 50th percentile of all test takers</td>
+       	       					<td>27 and below</td>
+       	       				</tr>
+       	        		</tbody>
+       	 	   		</table>
+       	 	   	<h3>How to send the scores to your Preferred Institutions?</h3>
+       	 	   		<p>
+       	 	   			The Score Report feature of the GMAT gives you the options to send the GMAT test scores from whichever test date you want schools to see. Note that even with the Score Reports option, you’ll want to perform your best on the GMAT the first time so you don’t have to retake the exam and pay an additional testing fee. You can view your scores by loging in to <a href="https://wsr.pearsonvue.com/affiliate/reporting/gmac/LoginPage.htm" target="_blank" rel="nofollow">this GMAC website</a>.
+       	 	   		</p>
+       	 	    
+
+         </div>
+	{% endblock %}

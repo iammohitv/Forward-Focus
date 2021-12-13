@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}	
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+<div class="about_us_body">
+	
+			<div class="container_about_us">
+				<div class="about_us">
+					<div class="text_about_us">
+						<h7 class="about_us_h1">About Us</h7>
+						<div class="line_about_us"></div>
+					</div>
+				</div>
+				<div class="content_about_us">
+					<p>Forward Focus Career Guidance believes in effectively serving Undergraduate/Graduate students from various streams to realize their true potential and suggests options for their future studies that align with their natural inclinations. Guidance is particularly very important in life. Throughout their lives people face many situations where they could benefit from unbiased advice. The primary difficulty an undergraduate student faces is choosing the best career considering strengths and weaknesses. Come join us now, to help you get better and the best! When you enroll with ForwardFocus, you get a truly personal learning experience that is fully online and yet focuses on your learning needs, your daily schedule and most importantly, your target GRE score - no compromise.</p>
+				</div>
+			</div>
+			<h3 style="background: white;margin-left:auto;
+			margin-right:auto;border-radius: 20px; color:#646464;width: 200px;font-size: 24px; text-align:center;padding: 7px;height: 40px;">Our team</h3>
+		<div class="about_us_row">
+		  <div class="about_us_column">
+		    <div class="about_us_card">
+		      <img src="{%static 'Images/prima.PNG' %}" style="width:150px;height:auto;padding-top:10px">
+		      <h7 class = "about_us_h1">Prima&nbsp;Sanghvi</h7>
+		      <p class="about_us_title">Software Engineer</p>
+		      <p>Ahmedabad University</p>
+		    </div>
+		  </div>
+
+		  <div class="about_us_column">
+		    <div class="about_us_card">
+		      <img src="{%static 'Images/mohit.PNG' %}" style="width:150px;height:auto;padding-top:10px">
+		      <h7 class = "about_us_h1">Mohit&nbsp;Vaswani</h7>
+		      <p class="about_us_title">Software Engineer</p>
+		      <p>Ahmedabad University</p>
+		    </div>
+		  </div>
+		  </div>
+        <div class="about_us_row">
+		  <div class="about_us_column">
+		    <div class="about_us_card">
+		      <img src="{%static 'Images/Jay.jpg' %}" style="width:150px;height:auto;padding-top:10px">
+			  <br>
+		      <h7 class = "about_us_h1">Jay&nbsp;Patel</h7>
+		      <p class="about_us_title">Software Engineer</p>
+		      <p>Ahmedabad University</p>
+		    </div>
+		  </div>  
+		  <div class="about_us_column">
+		    <div class="about_us_card">
+		      <img src="{%static 'Images/JD.jpg' %}" style="width:150px;height:auto;padding-top:10px">
+		      <h7 class = "about_us_h1">Jaydeep&nbsp;Modi</h7>
+		      <p class="about_us_title">Software Engineer</p>
+		      <p>Ahmedabad University</p>
+		    </div>
+		  </div>
+		</div>  
+		{% endblock %}

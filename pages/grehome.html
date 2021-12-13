@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block title %} GREhome {% endblock %}
+{% block content %}
+	         <div class="gre-bar ">
+	                              
+	            	<nav>
+						<ul class="list">
+							<li   class="active"><a href="{%url 'grehome' %}"><i class="fa-caret-down"></i>GRE</a></li> 
+							<li><a href="{%url 'grequant' %}"><i class="fa fa-calculator"></i>GRE Quant</a></li> 
+							<li ><a href="{%url 'greverbal' %}"><i class="fa fa-align-left"></i> GRE Verbal</a></li>
+							<li ><a href="{%url 'greawa' %}"><i class="fa fa-cube"></i> <span>GRE AWA</span></a></li>						
+
+					    </ul>
+					</nav>
+				</div>
+		
+        	 <div class="about-gre">
+         	    <h3 class="mt-0">About GRE</h3>
+         	         <p>
+         	         	The Graduate Record Examination (GRE) is a multiple-choice, computer-based, standardized exam that is often required for admission to graduate programs and graduate business programs (MBA) in United States and other countries. The GRE  The exam has been developed to evaluate the verbal, analytical and mathematical skills of the candidates. GRE is a computer-based test and has a user-friendly design. Prospective graduate and business school applicants from all around the world who are interested in pursuing a Master’s, MBA, specialized master’s course in business or doctoral degree take the GRE (General Test).
+         	         </p>
+         	         <p>
+         	         	The GRE is developed and administered by testmaker ETS to provide graduate and business schools with common measures for comparing applicants’ qualifications and preparedness for graduate-level academic work. Graduate school and business school admissions committees look at your GRE score, along with your academic record and supporting materials, to assess your readiness for the rigors of graduate academic study.
+         	         </p>
+         	         <p>
+         	         	What’s the takeaway? A high score on the GRE will have a direct, positive impact on your graduate or business school application.
+         	         </p>
+         	    <h3>What is tested on GRE?</h3>
+         	          <p> What’s tested on the GRE? The GRE measures your command of basic arithmetic, algebra, geometry, and data analysis, as well as college-level vocabulary. More importantly, it measures your ability to analyze and evaluate written material, think critically, and solve problems.
+         	          </p>
+         	          <p>
+         	          There are three total sections on the GRE and some test-takers face an unscored experimental or research section. You’ll tackle 80 scored questions on the GRE and two scored Analytical Writing tasks. If you are given a research or experimental section on your GRE test date, you may have to complete an additional 20 questions that won’t affect your total score.
+         	          </p>
+         	     			
+         	    <h3>Test Duration and Pattern</h3>	
+         	        		<table class="gre-test-duration-table">
+         	        				<thead>
+         	        						<tr>
+         	        							<th>Sections</th>
+         	        							<th>Parts and Number of Questions</th>
+         	        							<th>Duration</th>
+         	        							<th>Total Score</th>
+         	        						</tr>
+         	        				</thead>
+         	        					<tbody>
+         	        						<tr>
+         	        							<td>Analytical Writing</td>
+         	        							<td>Two Tasks<br> Task One - Analyse an issue<br> Task Two - Analyse an Argument</td>
+         	        							<td>Task 1: 30 Minutes.<br> Task 2: 30 Minutes.</td>
+         	        							<td>0 - 6</td>
+         	        						</tr>
+         	        						<tr>
+         	        							<td>Quantitative Reasoning</td>
+         	        							<td>Two Sections<br> 20 Questions in each section</td>
+         	        							<td>35 Minutes on each section</td>
+         	        							<td>170</td></tr><tr><td>Verbal Reasoning</td>
+         	        							<td>Two Sections<br> 20 Questions in each section</td>
+         	        							<td>30 Minutes on each section</td>
+         	        							<td>170</td></tr><tr>
+         	        							<td>Unscored</td>
+         	        							<td>Does not count towards your score.</td>
+         	        							<td>Varies</td><td>0</td>
+         	        						</tr>
+         	        					</tbody>
+         	        				</table>
+         	    <h3> What is a good GRE score? </h3>
+         	    	<p>
+         	    		When considering your GRE score goal, look at the requirements—or minimums, if applicable—at the graduate or business programs to which you’re applying. This will let you know your score baseline. If you can find the mean or average GRE score of admitted applicants, you’ll be able to determine what GRE score will make you a competitive applicant.The Verbal and Quant sections of the GRE are each scored from 130 to 170. The mean score for Verbal Reasoning is 151, and the mean score for Quantitative Reasoning is 153. The Analytical Writing Assessment is scored from 0 to 6 in half-point increments, and the mean score is 4.0. You can use the tables below to see the relationship between scaled scores and the test takers achieving them:
+         	    	</p>
+         	    	 <table class="gre-test-score-verbal">
+         	        	<thead >
+         	        		<tr>
+         	        			<th>Percentile</th>
+         	        			<th>Scaled GRE Verbal Score(2012-2018)</th>
+         	       			</tr>
+         	       		</thead>
+         	       		<tbody>
+         	       			<tr>
+         	       				<td>Top 10% of all test takers</td>
+         	       				<td>162</td>
+         	       			</tr>
+         	       			<tr>
+         	   					<td>Top 25% of all test takers</td>
+         	   					<td>157</td>
+         	   				</tr>
+         	   				<tr>
+             					<td>Top 50% of all test takers</td>
+             					<td>151</td>
+             				</tr>
+             				<tr>
+       	       					<td>Below 50th percentile of all test takers</td>
+       	       					<td>150</td>
+       	       				</tr>
+
+   
+       	        		</tbody>
+       	 	   		</table>
+                    <p> </p>
+         	        <table class="gre-test-score-quant">
+         	        	<thead>
+         	        		<tr>
+         	        			<th>Percentile</th>
+         	        			<th>Scaled GRE Quant Score(2012-2018)</th>
+         	       			</tr>
+         	       		</thead>
+         	       		<tbody>
+         	       			<tr>
+         	       				<td>Top 10% of all test takers</td>
+         	       				<td>166</td>
+         	       			</tr>
+         	       			<tr>
+         	   					<td>Top 25% of all test takers</td>
+         	   					<td>160</td>
+         	   				</tr>
+         	   				<tr>
+             					<td>Top 50% of all test takers</td>
+             					<td>153</td>
+             				</tr>
+             				<tr>
+       	       					<td>Below 50th percentile of all test takers</td>
+       	       					<td>152</td>
+       	       				</tr>
+       	        		</tbody>
+       	 	   		</table>
+       	 	   	<h3>What is Scoreselect?</h3>
+       	 	   		<p>
+       	 	   			The ScoreSelect feature of the GRE gives you the options to send only the GRE test scores from whichever test date you want schools to see. Note that even with the ScoreSelect option, you’ll want to perform your best on the GRE the first time so you don’t have to retake the exam and pay an additional testing feee
+       	 	   		</p>
+       	 	    <h3>When is the GRE offered?</h3>
+       	 	    	<p>
+       	 	    		The computer-delivered GRE is administered year-round in Prometric™ testing centers and on select test dates at other testing centers. The paper-delivered GRE is administered at certain testing centers on a limited number of dates. Seating for GRE is on a first-come, first-serve basis, and some testing center locations can fill up well in advance of the popular fall testing time. You can
+       	 	    		<a href="https://www.ets.org/gre/revised_general/register/centers_dates/" target="_blank" rel="nofollow">see a full list of testing centers, test dates, and seat availability on the ETS site</a>"see a full list of testing centers, test dates, and seat availability on the ETS site"</a>
+       	 	    	</p>
+       	 	    	<p>
+       	 	    	    It is highly recommended that you register for your preferred GRE test date early so you can select a date that will allow enough time for ETS to process your scores and send them to the institutions you’ll be applying to. This can take from 10 to 15 days. During popular testing times, seats in Prometric™ testing centers can be limited. You can take the computer-delivered GRE once every 21 days, up to five times within any continuous rolling 12-month period (365 days).
+       	 	        </p>
+       	 	        <p>
+       	 	        	You can register for the GRE online via <a href="https://www.ets.org/gre/revised_general/register/computer/" target="_blank" rel="nofollow">ETS</a>. For GRE-related questions, you can find <a href="https://www.ets.org/gre/contact" target="_blank" rel="nofollow">contact information for ETS here</a>.
+       	 	        </p>
+       	 	    <h3> When to take the GRE</h3>
+       	 	    	<p>
+       	 	    		Since graduate programs have a wide range of application deadlines, you’ll want to research your programs of interest ahead of time and ensure that your GRE score can be reported in time for your earliest deadline. Your GRE score is good for five years.
+       	 	    	</p>
+       	 	    	<p>
+       	 	    		You’ll want to devote 1–3 months to studying for the GRE, and top scorers report studying for 100+ hours.
+       	 	    	</p>
+       	 	    <h3>How much does it cost to take the GRE?</h3>
+       	 	        <p>
+       	 	        	The cost to take the GRE is $205 for all testing locations except China. The fee includes sending score reports to up to four graduate institutions of your choice.
+       	 	        </p>
+
+
+
+         </div>
+		 {% endblock %}

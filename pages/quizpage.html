@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="{% static 'css/rutu_style.css' %}"></link>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
+
+<div class="menu-bar">
+	<nav>
+		<img class="logo" src="{% static 'Images/LOGO_SE.PNG' %}">
+	<ul>
+		<li><a href="#">Home </li>
+		<li><a href="#">Evaluation <i class="fa fa-caret-down"></i></a>
+			<div class="sub-menu-1">
+				<ul>
+					<li><a href="{%url 'profile' %}">Profile Evaluation</a></li>
+					<li><a href="#">Marks Evaluation</a></li>
+					<li><a href="#">University Finder</a></li>
+				</ul>
+			</div>
+				
+		</li>
+		<li><a href="#">Examinations <i class="fa fa-caret-down"></i></a>
+		<div class="sub-menu-1">
+				<ul>
+					<li><a href="#">GRE</a></li>
+					<li><a href="#">CAT</a></li>
+					<li><a href="#">GATE</a></li>
+					<li><a href="#">IELTS</a></li>
+					<li><a href="#">TOEFL</a></li>
+					<li><a href="#">GMAT</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="#">Resources <i class="fa fa-caret-down"></i></a>
+		<div class="sub-menu-1">
+				<ul>
+					<li><a href="#">GRE</a></li>
+					<li><a href="#">CAT</a></li>
+					<li><a href="#">GATE</a></li>
+					<li><a href="#">IELTS</a></li>
+					<li><a href="#">TOEFL</a></li>
+					<li><a href="#">GMAT</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="#">Contact Us </a></li>
+		<li><a href="#">{{ user.username }} <i class="fa fa-caret-down"></i></a>
+		<div class="sub-menu-1">
+				<ul>
+					<li><a href="#">My Profile</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+	 </div>
+
+</head>
+<body>
+	<div class="gre-bar ">
+	                              
+		<nav>
+			<ul class="list">
+				<li class="active" ><a href="#">GREStyle Quiz- Reading Comprehension 1</a></li> 
+				<li ><a href="#">GREStyle Quiz- Reading Comprehension 2 </a></li> 
+				<li ><a href="#">GREStyle Quiz- Text Completion</a></li>
+				<li><a href="#"> GREStyle Quiz- Sentence Equivalence</a></li>
+				<li><a href="#"> GREStyle Quiz- Arithmetic</a></li>	
+				<li><a href="#"> GREStyle Quiz- Geometry</a></li>	
+				<li><a href="#"> GREStyle Quiz- Algebra</a></li>
+				<li><a href="#"> GREStyle Quiz- P & C</a></li>				
+
+			</ul>
+		</nav>
+	</div>
+	<script>
+		var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+		var questions = [
+			[ "When a deadly strain of avian flu known as H5N1 was first reported, way back in 2014, Chinese scientists reported that the virus had infected pigs too. This is a cause for alarm since pigs could potentially infect humans by allowing the virus to jump to humans. The findings gained little attention since it was published in Chinese in a local Chinese journal on veterinary medicine. Much later, when the news of this finding reached WHO, efforts were taken to translate itHistory has many such examples of important scientific findings not getting the attention they deserve when they are published in a language other than English. Many studies published in languages other than English have been overlooked by global reviews. This is just one part of the issue. The dominance of English as the lingua franca of science also makes non-English speaking researchers miss out on research published in English.?  What is the important point the author is making in this passage?", "Critical breakthroughs are usually published in non-English papers", "Scientists should know at least two languages other than their own to ensure they read journals in other languages", "Ignoring non-English papers can cripple the scientific understanding","All important information should be published only in English", "C" ],
+			[ "Which is a valid keyword in java?", "interface", "string", "Float","xyz", "A" ],
+			[ "Which is the valid declarations within an interface definition?", "xyz","public double methoda();", "public final double methoda();", "static void methoda(double d1);", "A" ],
+			[ "Which one is a valid declaration of a boolean?", "boolean b3 = false;","xyz", "boolean b2 = 'false';", "boolean b4 = Boolean.false();", "A" ]
+		];
+		function _(x){
+			return document.getElementById(x);
+		}
+		function renderQuestion(){
+			test = _("test");
+			if(pos >= questions.length){
+				test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+				_("test_status").innerHTML = "Test Completed";
+				pos = 0;
+				correct = 0;
+				return false;
+			}
+			_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+			question = questions[pos][0];
+			chA = questions[pos][1];
+			chB = questions[pos][2];
+			chC = questions[pos][3];
+			chD = questions[pos][4];
+			test.innerHTML = "<h5>"+question+"</h5>";
+			test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='D'> "+chD+"<br><br>";
+			test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+		}
+		function checkAnswer(){
+			choices = document.getElementsByName("choices");
+			for(var i=0; i<choices.length; i++){
+				if(choices[i].checked){
+					choice = choices[i].value;
+				}
+			}
+			if(choice == questions[pos][5]){
+				correct++;
+			}
+			pos++;
+			renderQuestion();
+		}
+		 /*$(document).ready( function() {
+				$('#deletesuccess').delay(10000).fadeOut();
+			  });*/
+		window.addEventListener("load", renderQuestion, false);
+		</script>
+	<style>
+		div#test{ border:#000 1px solid; padding:10px 10px 40px 40px; height: 500px;width: 600px; }
+		</style>
+	 <div class="about-gre">
+      <div class="timecounter" >
+		  
+			<script type="text/javascript">
+						function countDown(secs,elem){
+							var element = document.getElementById(elem);
+							element.innerHTML = "Time-Left : "+secs+ " s";
+							if(secs < 1){
+							clearTimeout(timer);
+							
+							element.innerHTML = '<br><br><h1 style="color:black;font-family:arial;">!! Test Completed !!</h1>';
+							element.innerHTML += 'Try other Test !!';
+							
+							}
+							secs--;
+							var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+							}
+							
+		
+			</script>
+					<div id="status" ></div>
+					<script type="text/javascript">countDown(120,"status");
+                       
+                    </script>
+	 </div>
+    <h2 id="test_status"></h2>
+	<div id="test"></div>
+</div>
+</body>
+</html>

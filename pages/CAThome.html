@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block title %} GREhome {% endblock %}
+{% block content %}
+
+
+	         <div class="gre-bar ">
+	                              
+	            	<nav>
+						<ul class="list">
+							<li class="active" ><a href="{%url 'cathome' %}"><i class="fa fa-caret-down"></i>CAT</a></li> 
+							<li ><a href="{%url 'catquant' %}"><i class="fa fa-calculator"></i>Quantatitive Ability</a></li> 
+							<li ><a href="{%url 'catverbal' %}"><i class="fa fa-align-left"></i>Verbal ability</a></li>
+							<li><a href="{%url 'catdilr' %}"><i class="fa fa-cube"></i> <span>Logical Reasoning</span></a></li>						
+
+					    </ul>
+					</nav>
+				</div>
+		
+        	 <div class="about-gre">
+         	    <h3 class="mt-0">About CAT</h3>
+         	         <p>
+         	         	The Common Admission Test (CAT) is a computer based test for admission in a graduate management program.The test consists of three sections Verbal Ability and Reading Comprehension (VARC), Data Interpretation and Logical Reasoning (DILR) and Quantitative Ability (QA). Overall it’s a three hour online exam divided into one hour each section. The Indian Institutes of Management (IIMs) started this exam and use the test for selecting students for their business administration programs (MBA or PGDM). The test is conducted every year by one of the IIMs based on a policy of rotation.
+         	         </p>
+         	         <p>
+         	         	The Common Admission Test (CAT) is developed and administered by IIM's to provide graduate and business schools with common measures for comparing applicants’ qualifications and preparedness for graduate-level academic work. Graduate school and business school admissions committees look at your CAT score, along with your academic record and supporting materials, to assess your readiness for the rigors of graduate academic study.
+         	         </p>
+         	         <p>
+                    What’s the takeaway? A high score on the CAT will have a direct, positive impact on your graduate or business school application in INDIA.
+         	         </p>
+         	    <h3>What is tested in CAT?</h3>
+         	          <p> What’s tested on the CAT? The CAT measures your command of basic arithmetic, algebra, geometry, and data analysis, vocabulary, reading comprehension, logical skills etc. More importantly, it measures your ability to analyze and evaluate written material, think critically, and solve problems.
+         	          </p>
+         	          <p>
+         	          CAT exact exam pattern changes every year. For CAT 2018, a mock test was supplied.CAT is a computer-based test which consists of 3 sections:Verbal and Reading Comprehension (VARC),Data Interpretation & Logical Reasoning (DI & LR),Quantitative Ability (QA),The Quantitative Ability and Verbal & Reading Comprehension sections consisted 34 questions each, whereas the Data Interpretation & Logical Reasoning section had 32 questions. This distribution of questions was same since CAT 2015. Before this, the distribution of questions was different. The test has a time limit of 180mins.
+         	          </p>
+         	     			
+         	    <h3>Test Duration and Pattern</h3>	
+         	        		<table class="gre-test-duration-table">
+         	        				<thead>
+         	        						<tr>
+         	        							<th>Sections</th>
+         	        							<th>Parts and Number of Questions</th>
+         	        							<th>Duration</th>
+         	        							<th>Total Score</th>
+         	        						</tr>
+         	        				</thead>
+         	        					<tbody>
+         	        						<tr>
+         	        							<td>Data Interpretation and Logical Reasoning</td>
+         	        							<td> 32 Questions in each section</td>
+         	        							<td>180 mins for the test</td>
+         	        							<td>96</td>
+         	        						</tr>
+         	        						<tr>
+         	        							<td>Quantitative Reasoning</td>
+         	        							<td> 34 Questions in each section</td>
+                                <td>180 mins for the test</td>
+                                <td>102</td>
+                              </tr>
+                              <tr>
+                                <td>Verbal Reasoning</td>
+                                <td> 34 Questions in each section</td>
+                                <td>180 mins for the test</td>
+                                <td>102</td>
+         	        						</tr>
+         	        					</tbody>
+         	        				</table>
+         	    <h3> What is a good CAT score? </h3>
+         	    	<p>
+         	    		When considering your CAT score goal, The target should be to score more than 95 percentile in CAT. Considering 95 percentile the average score should be 135+ considering all the three sections.Your overall CAT 2020 score of 160+ gets you 99 percentile. Your Verbal Reasoning and Reading comprehension score of 65-70 gets you 99 sectional percentile in Verbal Reasoning and Reading comprehension. Your Data interpretation and logical reasoning score of 50+ gets you 99 sectional percentile in Data interpretation and logical reasoning. Your Quantative reasoning score of 55+ gets you 99 sectional percentile in Quant. 
+         	    	</p>
+         	    	 <table class="gre-test-score-verbal">
+         	        	<thead >
+         	        		<tr>
+         	        			<th>Percentile</th>
+         	        			<th>CAT verbal score</th>
+         	       			</tr>
+         	       		</thead>
+         	       		<tbody>
+         	       			<tr>
+         	       				<td>99 percentile and above</td>
+         	       				<td>70+</td>
+         	       			</tr>
+         	       			<tr>
+         	   					<td>95 percentile and above</td>
+         	   					<td>59+</td>
+         	   				</tr>
+         	   				<tr>
+             					<td>90 percentile and above</td>
+             					<td>52+</td>
+             				</tr>
+             				<tr>
+       	       					<td>85 percentile and above(CUT-OFF)</td>
+       	       					<td>45+</td>
+       	       				</tr>
+       	        		</tbody>
+       	 	   		</table>
+                  <table class="gre-test-score-verbal">
+                    <thead >
+                      <tr>
+                        <th>Percentile</th>
+                        <th>CAT Quant Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>99 percentile and above</td>
+                        <td>57+</td>
+                      </tr>
+                      <tr>
+                      <td>95 percentile and above</td>
+                      <td>40+</td>
+                    </tr>
+                    <tr>
+                      <td>90 percentile and above</td>
+                      <td>31+</td>
+                    </tr>
+                    <tr>
+                        <td>85 percentile and above(CUT-OFF)</td>
+                        <td>27+</td>
+                      </tr>
+                    </tbody>
+                </table>
+                 <table class="gre-test-score-verbal">
+                    <thead >
+                      <tr>
+                        <th>Percentile</th>
+                        <th>CAT DI--LR score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>99 percentile and above</td>
+                        <td>51+</td>
+                      </tr>
+                      <tr>
+                      <td>95 percentile and above</td>
+                      <td>40+</td>
+                    </tr>
+                    <tr>
+                      <td>90 percentile and above</td>
+                      <td>34+</td>
+                    </tr>
+                    <tr>
+                        <td>85 percentile and above(CUT-OFF)</td>
+                        <td>29+</td>
+                      </tr>
+                    </tbody>
+                </table>
+       	 	    <h3>When is the CAT offered?</h3>
+       	 	    	<p>
+       	 	    		The CAT is taken only once an year, mostly in november. You can visit following website for details
+       	 	    		<a href="https://iimcat.ac.in/per/g01/pub/756/ASM/WebPortal/1/index.html?756@@1@@1" target="_blank" rel="nofollow">see a full list of testing centers and details on the IIMCAT site</a>""</a>
+       	 	    	</p>
+    
+       	 	        <p>
+       	 	        	You can register for the CAT online via <a href="https://iimcat.ac.in/per/g01/pub/756/ASM/WebPortal/1/index.html?756@@1@@1" target="_blank" rel="nofollow">IIMCAT</a>. For CAT-related questions, you can find <a href="https://iimcat.ac.in/per/g01/pub/756/ASM/WebPortal/1/index.html?756@@1@@1#!" target="_blank" rel="nofollow">contact information for IIMCAT here</a>.
+       	 	        </p>
+       	 	    <h3>How much does it cost to take the CAT?</h3>
+       	 	        <p>
+       	 	        	Single Fee for MBA Admission: CAT 2020 provides admission opportunity in 20 IIMs with the single point payment of CAT registration fee of Rs.2000/- for General candidates and Rs.1000/- for reserved category.
+       	 	        </p>
+
+
+
+         </div>
+	{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} UpdateProfile {% endblock %}
+{% block content %}
+
+
+		 <div class="form-style-56">
+			<form action="{%url 'updateprofile' %}" method="post">
+			 {% csrf_token %}
+				 {{form}}
+			<input type="submit" value="Update" />
+			</form>
+		
+		<form action = "{%url 'profile_result' %}">
+
+		<input type="submit" value="Know your result" />
+					</form>
+			</div>
+	{% endblock %}

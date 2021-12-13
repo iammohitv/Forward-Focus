@@ -1,0 +1,188 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>University Finder</title>
+		<link rel="stylesheet" href="{% static 'css/style_university_rutu.css' %}"></link>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
+		
+	</head>
+	<body>
+		
+	<div class="menu-bar">
+		<nav>
+			<img class="logo" src="{% static 'Images/LOGO_SE.PNG' %}">
+		<ul>
+			<li><a href="{%url 'home' %}">Home </li>
+			<li class = "active"><a href="#">Evaluation <i class="fa fa-caret-down"></i></a>
+				<div class="sub-menu-1">
+					<ul>
+						<li><a href="{%url 'profile' %}">Profile Evaluation</a></li>
+						<li><a href="{%url 'score_evaluation_page' %}">Marks Evaluation</a></li>
+						<li><a href="{%url 'greuni' %}">University Finder</a></li>
+					</ul>
+				</div>
+					
+			</li>
+			<li><a href="#">Examinations <i class="fa fa-caret-down"></i></a>
+			<div class="sub-menu-1">
+					<ul>
+						<li><a href="{%url 'grehome' %}">GRE</a></li>
+							<li><a href="{%url 'cathome' %}">CAT</a></li>
+							<li><a href="{%url 'gatehome' %}">GATE</a></li>
+							<li><a href="{%url 'ieltshome' %}">IELTS</a></li>
+							<li><a href="{%url 'toeflhome' %}">TOEFL</a></li>
+							<li><a href="{%url 'gmathome' %}">GMAT</a></li>>
+					</ul>
+				</div>
+			</li>
+			<li><a href="#">Resources <i class="fa fa-caret-down"></i></a>
+			<div class="sub-menu-1">
+					<ul>
+						<li><a href="{%url 'gre_resources' %}">GRE</a></li>
+						<li><a href="{%url 'resources_cat' %}">CAT</a></li>
+						<li><a href="{%url 'resources_gate' %}">GATE</a></li>
+						<li><a href="{%url 'resources_ielts' %}">IELTS</a></li>
+						<li><a href="{%url 'resources_toefl' %}">TOEFL</a></li>
+						<li><a href="{%url 'resources_gmat' %}">GMAT</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="{%url 'aboutus' %}">About Us </a></li>
+			<li><a href="#">{{ user.username }} <i class="fa fa-caret-down"></i></a>
+			<div class="sub-menu-1">
+					<ul>
+						<li><a href="{%url 'myprofile' %}">My Profile</a></li>
+						<li><a href="{%url 'index' %}">Logout</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+		 </div>
+		 <div class="main">
+		  <div class="pagination", style="top: 20px;left: 500px;">
+		  <a href="#">&laquo;</a>
+		  <a href="{%url 'greuni' %}">GRE</a>
+		  <a href="{%url 'greunicat' %}">CAT</a>
+		  <a class="active" href="{%url 'greunigmat' %}">GMAT</a>
+		  <a href="{%url 'greunigate' %}">GATE</a>
+		  		  <a href="#">&raquo;</a>
+		</div>
+		 <div class="form-style-6">
+			<form style="text-align: center;">
+			<fieldset>
+			<legend>FIND UNIVERSITY</legend>
+			<input type="number" name="field1" placeholder="Your Estimated GMAT score*">
+			<input type="number" name="field2" placeholder="Academics(%)">
+			<label for="Courses">Choose Course</label>
+			<select id="degree" name="field3">
+			<optgroup label="Courses">
+			  <option value="choice1">Organisational Behaviour and Human Resources Management</option>
+			  <option value="choice2">Entrepreneurship</option>
+			  <option value="choice3">Marketing</option>
+			  <option value="choice4">Production and Operations Management</option>
+			  <option value="choice5">Digital and Social Media Marketing</option>
+			  <option value="choice6">Logistics and Supply Chain Management</option>
+			  <option value="choice7">Information Systems</option>
+			  <option value="choice8">Finance and Accounting</option>
+			   <option value="choice9">Event Management</option>
+			   <option value="choice10">Real Estate Construction and Management</option>
+			</optgroup>
+			</select>     
+			<input type="submit" value="Find" />
+			</fieldset>
+			</form>
+			</div>
+			<div style=" text-align: center;"><h3>The suggested universities are as follows:</h3>
+			<table style="width:55%;margin-left: auto;margin-right:auto;">
+			  <tr class="university_table">
+			    <th class="university_table">University Name</th>
+			    <th class="university_table">Loaction</th>
+			    <th class="university_table">Fees</th>
+			  </tr>
+			  <tr>
+			    <td class="university_table">Maryland Baltimore</td>
+			    <td class="university_table">MS in Information Systems</td>
+			    <td class="university_table">50000$</td>
+			  </tr >
+			  <tr class="university_table">
+			    <td class="university_table">University of Utah</td>
+			    <td class="university_table">MS in CS</td>
+			    <td class="university_table">80000$</td>
+			  </tr>
+			  <tr>
+			    <td class="university_table">Ahmedabad University</td>
+			    <td class="university_table">MS in ICT</td>
+			    <td class="university_table">5000$</td>
+			  </tr>
+ 			</table>
+		</div>
+		</div>
+		<div class="footer">
+			<div class="footer-content">
+				<div class="footer-section about">
+					<div class="logo1" >
+					
+					<img alt="logo" src="{% static 'Images/LOGO_SE.PNG' %}" style="height: 80px; width: 150px;">
+					
+					</div>
+					<p>
+					"Push yourself because no-one else if gonna do it for you."
+					</p>
+					<div class="contact">
+						<div>
+						<span><i class="fa fa-phone"></i> &nbsp; 8758302830</span>
+						</div>
+						<div>
+						<span><i class="fa fa-envelope-o"></i> &nbsp; forwardfocus@info.in</span>
+						</div>
+					</div>
+					<div class="socials">
+						<br>
+						<span><a href="#"><i class="fa fa-facebook-official"></i></a>&nbsp;</span>
+						<span><a href="#"><i class="fa fa-instagram"></i></a>&nbsp;</span>
+						<span><a href="#"><i class="fa fa-twitter"></i></a>&nbsp;</span>
+						<span><a href="#"><i class="fa fa-info-circle"></i></a>&nbsp;</span>
+					</div>
+				</div>
+				<div class="footer-section links" style="max-height: 100%;">
+					<h2 style="font-size: 18px;">Evaluation</h2>
+					<br>
+					<ul>
+						<li><a href="{%url 'profile' %}">Profile Evaluation</a></li>
+						<li><a href="{%url 'score_evaluation_page' %}">Marks Evaluation</a></li>
+						<li><a href="{%url 'greuni' %}">University Finder</a></li>				
+					</ul>
+				</div>
+				<div class="footer-section links">
+					<h2 style="font-size: 18px;">Examinations</h2>
+					<br>
+					<ul>
+						<li><a href="{%url 'grehome' %}">GRE</a></li>
+							<li><a href="{%url 'cathome' %}">CAT</a></li>
+							<li><a href="{%url 'gatehome' %}">GATE</a></li>
+							<li><a href="{%url 'ieltshome' %}">IELTS</a></li>
+							<li><a href="{%url 'toeflhome' %}">TOEFL</a></li>
+							<li><a href="{%url 'gmathome' %}">GMAT</a></li>
+					</ul>
+				</div>
+				<div class="footer-section links">
+					<h2 style="font-size: 18px;">Resources</h2>
+					<br>
+					<ul>
+						<li><a href="{%url 'gre_resources' %}">GRE</a></li>
+						<li><a href="{%url 'resources_cat' %}">CAT</a></li>
+						<li><a href="{%url 'resources_gate' %}">GATE</a></li>
+						<li><a href="{%url 'resources_ielts' %}">IELTS</a></li>
+						<li><a href="{%url 'resources_toefl' %}">TOEFL</a></li>
+						<li><a href="{%url 'resources_gmat' %}">GMAT</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				&copy; forwardfocus.com | TEAM FORWARDFOCUS
+			</div>
+	</body>
+</html>

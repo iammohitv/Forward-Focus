@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+{% block content %}
+	<style>
+	input{
+	margin-left:50px;
+	}
+	button{
+	background: #646464;
+ 
+	-webkit-border-radius: 19;
+	-moz-border-radius: 19;
+	border-radius: 19px;
+	text-shadow: 0px 6px 6px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 19px;
+	padding: 6px 21px 11px 20px;
+	text-decoration: none;
+	cursor:pointer;
+	}
+	button:hover {
+	background: #000000;
+	text-decoration: none;
+	cursor:pointer;
+	}
+	h3{font-size:15px; color: #646464;}
+	</style>
+	
+	<div class="quiz-bar ">
+	                              
+		<nav>
+			<ul class="list">
+				<li ><a href="{%url 'quiz1' %}">GREStyle Quiz- Reading Comprehension </a></li> 
+				<li ><a href="{%url 'quiz2' %}">GREStyle Quiz- Text Completion</a></li>
+				<li ><a href="{%url 'quiz3' %}"> GREStyle Quiz- Sentence Equivalence</a></li>
+				<li><a href="{%url 'quiz4' %}"> GREStyle Quiz- Arithmetic</a></li>	
+				<li ><a href="{%url 'quiz5' %}"> GREStyle Quiz- Geometry</a></li>	
+				<li ><a href="{%url 'quiz6' %}"> GREStyle Quiz- Algebra</a></li>
+				<li class="active"><a href="{%url 'quiz7' %}"> GREStyle Quiz- P & C</a></li>			
+				
+			</ul>
+		</nav>
+	</div>
+	<script>
+		var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+		var questions = [
+			[ "In how many ways can the letters of the word<br><br> 'VERBAL' <br><br> be rearranged?<br>", "A. 36<br>", "B. 12<br>", "C. 720<br>","D. 188<br>", "C" ],
+			[ "There are 2 multiple choice questions with 5 options.<br> If there is only one correct answer,<br> In how many ways can a student answer the questions correctly?<br>", "A. 2<br>", "B. 1<br>", "C. 10<br>", "D. 6<br>", "C" ],
+			[ "What is the number of possible words that can be made using the word<br><br> “EASYQUIZ” <br><br> such that the vowels always come together?<br>", "A. 120<br>","B. 720<br>", "C. 2880<br>", "D. 4320<br>", "C" ],
+			[ "How many ways a 6 member team can be formed having 3 men and 3 ladies from a group of 6 men and 7 ladies?<br>", "A. 700<br>", "B. 720<br>", "C. 120<br>", "D. 500<br>", "A" ]
+		];
+		function _(x){
+			return document.getElementById(x);
+		}
+		function renderQuestion(){
+			test = _("test");
+			if(pos >= questions.length){
+				test.innerHTML = "<h3>You got "+correct+" of "+questions.length+" questions correct </h3> <br> <h2>Answer 1. (C) 720 </h3> <br> <h2>Answer 2. (C) 10 </h2> <br> <h2> Answer 3. (C) 2880 </h2> </br> <h2> Answer 4. (A) 700 </h3> </br>";
+				_("test_status").innerHTML = "Test Completed";
+				pos = 0;
+				correct = 0;
+				return false;
+			}
+			_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+			question = questions[pos][0];
+			chA = questions[pos][1];
+			chB = questions[pos][2];
+			chC = questions[pos][3];
+			chD = questions[pos][4];
+			test.innerHTML = "<h5>"+question+"</h5>";
+			test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='D'> "+chD+"<br><br>";
+			test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+		}
+		function checkAnswer(){
+			choices = document.getElementsByName("choices");
+			for(var i=0; i<choices.length; i++){
+				if(choices[i].checked){
+					choice = choices[i].value;
+				}
+			}
+			if(choice == questions[pos][5]){
+				correct++;
+			}
+			pos++;
+			renderQuestion();
+		}
+		 /*$(document).ready( function() {
+				$('#deletesuccess').delay(10000).fadeOut();
+			  });*/
+		window.addEventListener("load", renderQuestion, false);
+		</script>
+	<style>
+		div#test{ border:#000 1px solid; padding:10px 10px 40px 40px; height: 500px;width: 600px; }
+		</style>
+	 <div class="about-quiz">
+      <div class="timecounter" >
+		  
+			<script type="text/javascript">
+						function countDown(secs,elem){
+							var element = document.getElementById(elem);
+							element.innerHTML = "Time-Left : "+secs+ " s";
+							if(secs < 1){
+							clearTimeout(timer);
+							
+							element.innerHTML = '<br><br><h1 style="color:black;font-family:arial;">!! Test Completed !!</h1>';
+							element.innerHTML += 'Try other Test !!';
+							
+							}
+							secs--;
+							var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+							}
+							
+		
+			</script>
+					<div id="status" ></div>
+					<script type="text/javascript">countDown(120,"status");
+                       
+                    </script>
+	 </div>
+    <h3 id="test_status"></h3>
+	<div id="test"></div>
+	{% endblock %}

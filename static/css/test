@@ -1,0 +1,258 @@
+#test_status{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+#test{
+	width:200px;
+	height:50px;
+	background-color:white;
+	margin-left:300px;
+	margin-top:30px;
+	
+}
+#test
+{
+  position: relative;
+}
+#test:before, #test:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  padding:2px 2px 2px 2px;
+  bottom: 25px;
+  
+  width: 60%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+#test:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+#test_status{
+	color:white;
+	width:565px;
+	height:30px;
+	background-color:#646464;
+	margin-left:300px;
+	margin-top:50px;
+	padding-left:15px;
+	padding-top:3px;
+	border-radius:13px;
+}
+
+
+.timecounter{
+	color:black;
+	margin-left:40%;
+
+}
+
+.about-quiz {
+  margin-left: 250px; /* Same as the width of the sidebar */
+   margin-top: 50px;
+  padding: 10px 30px;
+}
+.quiz-bar 
+{ 
+  width: 350px;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  left: 50px;
+  background: #646464;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+.quiz-bar a 
+{
+	padding: 30px 20px 10px 20px;
+	text-decoration: none;
+	font-size: 15px;
+	color: #ffffff;
+	display: block;
+}
+.active, .quiz-bar ul li:hover
+{
+	background: #000000;
+	border-radius: 1px;
+}
+
+
+.profile_body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+.profile_evaluation_container{
+	width:100%;
+	height:auto;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.profile_evaluation{
+	width:100%;
+	height: 600px;
+	/*background-image: url('/static/Images/profile3.jpg');
+	
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;*/
+}
+.text_profile{
+	font-size: 30px;
+	
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+	text-shadow: 0px 15px 12px #000;
+	background-image: url('/static/Images/profile3.jpg');
+	width: 100%;
+	background-position:center;
+    background-repeat:no-repeat; background-size:cover; width: '100%';
+	height:530px;
+	padding-bottom: 80px;
+}
+.line_about_us{
+	width:200px;
+	height: 8px;
+	background-color: white;
+	display: block;
+	position: relative;
+	border-radius: 5px;
+	left:10%;
+	box-shadow: 0px 15px 12px 0px #000;
+}
+.profile_h1
+{
+	font-size: 2.0em;
+	padding-top: 80px;
+}
+.content_profile{
+	width:100%;
+	height:auto;
+	background-color: white;
+	font-size: 23px;
+	font-family: audiowide;
+	color: #646464;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 10px;
+}
+.about_us_h1
+{
+	font-size: 2.0em;
+}
+.profile_column
+  {
+      width:25%;
+      margin-left: 80px;
+      float:left;
+      padding:10px 10px;
+  }
+
+  .profile_row:after{
+      content:"";
+      display:table;
+      clear:both;
+  }
+
+ 
+
+  @media screen and (max-width:600px)
+  {
+      .profile_column
+      {
+          width:100%;
+          display:block;
+          margin-bottom: 20px;
+      }
+  }
+
+  .profile_card
+  {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      max-width:300px;
+      margin:auto;
+      height: 200px;
+      background-color:#646464;
+      text-align:center;
+      border-radius:0px;
+      padding-bottom:15px;
+  }
+  .profile_h1_card
+  {
+  	background: white;
+  	padding-top: 10px;
+  	margin-left:auto;
+	margin-right:auto;
+	border-radius: 0px; 
+	color:#646464;
+	width: 200px;
+	font-size: 24px;
+	text-align:center;
+	padding: 7px;
+	height: 40px;
+  }
+
+  .profile_title
+  {
+      color:gray;
+      font-size:18px;
+  }
+
+  .profile_button
+  {
+      border:none;
+      padding:8px;
+      display: inline-block;
+      color:white;
+      background-color:black;
+      cursor:pointer;
+      width:70%;
+      border-radius:20px;
+      font-size:18px;
+      text-align:center;
+  }
+  .profile_card li
+  {
+  	font-size: 20px;
+  	color: white
+  }
+  .profile_card a{
+      text-decoration: none;
+      font-size:20px;
+      color:black;
+      margin-left: 0px;
+  }
+
+  .profile_card a:hover,button:hover{
+      opacity: 0.6;
+      color:white;
+  }

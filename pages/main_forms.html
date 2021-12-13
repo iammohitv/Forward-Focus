@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% block title %} Profile Evaluation {% endblock %}
+{% block content %}
+
+        <script>function validateForm() {
+			var budget = document.forms["myForm"]["fields6"].value;
+			var date_dob= document.forms["myForm"]["fields2"].value;
+			if (budget <= 15000) {
+			  alert("MINIMUM BUDGET: 15000INR");
+			  return false;
+			}
+			var phone = document.forms["myForm"]["field3"].value;
+            var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+            if(phone.value.match(phoneNum)) {
+                return true;
+            }
+            else {
+				alert("Please enter valid contact number");
+                return false;
+			}
+			var f1 = document.forms["myForm"]["fields11"].value;
+			var f2 = document.forms["myForm"]["fields12"].value;
+			var f3 = document.forms["myForm"]["fields13"].value;
+			var f4 = document.forms["myForm"]["fields14"].value;
+			if ((f1 <=0)&(f1>=100)) {
+    		alert("Percentage should be greater than 0 and less than 100");
+    		return false;
+			  }
+			  if ((f1 <=0)&(f1>=100)) {
+    		alert("Percentage should be greater than 0 and less than 100");
+    		return false;
+			  }
+			  if ((f2 <=0)&(f2>=100)) {
+    		alert("Percentage should be greater than 0 and less than 100");
+    		return false;
+			  }
+			  if ((f3 <=0)&(f3>=100)) {
+    		alert("Percentage should be greater than 0 and less than 100");
+    		return false;
+			  }
+			  if ((f4 <=0)&(f4>=100)) {
+    		alert("Percentage should be greater than 0 and less than 100");
+    		return false;
+ 			 }
+
+		}</script>
+		 <div class="form-style-56">
+			<form name="myForm" action="{%url 'checkeval' %}" onsubmit="return validateForm()" method="post">
+			 {% csrf_token %}
+				 
+			<fieldset>
+			<legend><span class="number">1</span> Candidate Info</legend>
+			{% if messages %}
+			<ul class="messages">
+					{% for message in messages %}
+    				<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    				{% endfor %}
+			</ul>
+			{% endif %}
+
+			<input type="text" name="field1" placeholder="Enter Your First Name *"value= {{profile.name}}>
+			<input type="date" name="field2" placeholder="Your Date of birth *" value={{profile.dob}} max="2002-01-01">
+			<input type="number" name="field3" placeholder="Your Contact Number *" value={{profile.contact}}>
+			<label for="degree">Which Country are you planning to go for further studies?</label>
+			<select id="country" name="field5" >
+			<optgroup label="Countries">
+			  <option value="India" value={{profile.degree}}>India</option>
+			  <option value="USA" value={{profile.degree}}>United States of America</option>
+			  <option value="Canada" value={{profile.degree}}>Canada</option> 
+			  <option value="Australia" value={{profile.degree}}>Australia</option> 
+			  <option value="Germany" value={{profile.degree}}>Germany</option>
+			  <option value="London" value={{profile.degree}}>London</option> 
+			</optgroup>
+			</select>      
+			
+			<input type="number" name="field6" placeholder="Your Yearly Budget *" value={{profile.budget}}>
+			<label for="degree">Which Degree are you aimming for ?</label>
+			<select id="degree" name="field7" >
+			<optgroup label="Programs">
+			  <option value="MBA" value={{profile.degree}}>Masters in Business Administration</option>
+			  <option value="MS" value={{profile.degree}}>Masters in Science and Techonology</option> 
+			</optgroup>
+			</select>      
+			</fieldset>
+			<fieldset>
+			<legend><span class="number">2</span> Area Of Interests</legend>
+			<label for="AOI1">Area of interest preference 1?</label>
+			<select id="AOI1" name="field8">
+			<optgroup label="AOI">
+			  <option value="CS" value={{profile.AOI_1}}>Computer Science</option>
+			  <option value="DS" value={{profile.AOI_1}}>Data Science</option>
+			  <option value="WC" value={{profile.AOI_1}}>Wireless Communication</option>
+			  <option value="IS" value={{profile.AOI_1}}>Information Systems</option>
+			  <option value="ENV" value={{profile.AOI_1}}>Environmental Engineering</option>
+			  <option value="CE" value={{profile.AOI_1}}>Chemical Engineering</option>
+			  <option value="M" value={{profile.AOI_1}}>Logistic and supply chain managemnet</option>
+			  <option value="F" value={{profile.AOI_1}}>Masters in Finance</option>
+			  <option value="M1" value={{profile.AOI_1}}>Marketing Management</option>
+			  <option value="HR" value={{profile.AOI_1}}>Human Resources Management </option>
+			  <option value="E" value={{profile.AOI_1}}>Enterpreneurship</option>
+			  <option value="IB" value={{profile.AOI_1}}>International Business Management </option>
+			</optgroup>
+			</select>
+			<label for="AOI2">Area of interest preference 2?</label>
+			<select id="AOI2" name="field9" value={{profile.AOI_2}}>
+			<optgroup label="AOI">
+			  <option value="CS">Computer Science</option>
+			  <option value="DS">Data Science</option>
+			  <option value="WC">Wireless Communication</option>
+			  <option value="IS">Information Systems</option>
+			  <option value="ENV">Environmental Engineering</option>
+			  <option value="CE">Chemical Engineering</option>
+			  <option value="M">Logistic and supply chain managemnet</option>
+			  <option value="F">Masters in Finance</option>
+			  <option value="M1">Marketing Management</option>
+			  <option value="HR">Human Resources Management </option>
+			  <option value="E">Enterpreneurship</option>
+			  <option value="IB">International Business Management </option>			
+			  </optgroup>
+			</select>
+			</fieldset>
+			<fieldset>
+			<legend><span class="number">3</span> Academic Details</legend>
+			<input type="number" name="field11" placeholder="10th grade percentage *" value={{profile.percentage_10}}>
+			<input type="number" name="field12" placeholder="12th grade percentage *" value={{profile.percentage_12}}>
+			<input type="number" name="field13" placeholder="Graduate/Under-Graduate percentage *" value={{profile.percentage_undergrad}}>
+			<input type="number" name="field14" placeholder="No. of Backlogs(If-any) *" value={{profile.backlogs}}>
+			</fieldset>
+			<input type="submit" value="Save" />
+			  
+			</form>
+			</div>
+	{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %} GREhome {% endblock %}
+{% block content %}
+	         <div class="gre-bar ">
+	                              
+	            	<nav>
+						<ul class="list">
+							<li  ><a href="{%url 'gmathome' %}"><i class="fa-caret-down"></i> GMAT</a></li> 
+							<li ><a href="{%url 'gmatir' %}"><i class="fa fa-align-left"></i> GMAT Integrated Reasoning</a></li> 
+							<li  ><a href="{%url 'gmatquant' %}"><i class="fa fa-calculator"></i> GMAT Quant Reasoning</a></li>
+							<li class="active"><a href="{%url 'gmatverbal' %}"><i class="fa fa-cube"></i> <span>GMAT Verbal Reasoning</span></a></li>
+							<li><a href="{%url 'gmatawa' %}"><i class="fa fa-cube"></i> <span>GMAT AWA</span></a></li>						
+
+					    </ul>
+					</nav>
+				</div>
+		
+        	 <div class="about-gre">
+         	    <h3 class="mt-0">GMAT Verbal Reasoning</h3>
+         	         <p>
+         	         The Verbal Reasoning section of the GMAT™ exam measures your ability to read and comprehend written material, reason and evaluate arguments, and correct material to express ideas effectively in standard written English. It consists of 36 multiple-choice questions. You will have 65 minutes to complete it.
+         	         </p>
+                   <h3>Three Types of Questions in the Verbal Section</h3>
+         	         <p>
+         	        There are three types of questions in the Verbal Section: Reading Comprehension, Critical Reasoning, and Sentence Correction. Reading Comprehension and Critical Reasoning questions have sub-types that are designed to test specific verbal skills.
+         	         </p>
+         	         <p>
+         	         You will not need specialized knowledge of the subject matter to answer the questions.
+         	         </p>
+                    <h3>Reading Comprehension</h3>
+                    <p> Measures your ability to understand words and statements, understand logical relationships between significant points, draw inferences, and follow the development of quantitative concepts. Specifically, the following reading skills will be tested: main idea, supporting idea, inference, application, logical structure, and style.
+                    </p>
+                    <p>
+                    Each Reading Comprehension passage comes with questions that ask you to interpret material, draw inferences or apply to a further context. The passages discuss topics including social sciences and humanities, physical and biological sciences, or a business-related field.
+                    </p>
+         	          <h3>Critical Reasoning</h3>
+         	          <p> Measures your ability to make arguments, evaluate arguments, and formulate or evaluate a plan of action.
+         	          </p>
+         	          <p>
+         	         Critical Reasoning questions are based on a short reading passage, usually fewer than 100 words. Typically, the short text comes with a question that asks you which of the five answer options strengthens or weakens an argument, tells why the argument is flawed, or strongly supports or damages the argument.
+         	          </p>
+                    <h3>Sentence Correction</h3>
+                    <p> Measures two broad aspects of your language proficiency. First, correct expression, referring to sentences that are grammatically and structurally sound. Second, effective expression, referring to sentences that effectively express an idea or relationship clearly, concisely, and grammatically.
+                    </p>
+                    <p>
+                    Each Sentence Correction question presents a sentence, part or all of which is underlined. Beneath the sentence are five ways of phrasing the underlined part. Paying attention to grammar, word choice and sentence construction, you must choose the answer that produces the most effective sentence.
+                    </p>
+                    <h3>Test Your Verbal Skills</h3>
+                    <p><b>Sample Reading Comprehension Question</b></p>
+                    <p><b>Directions</b></p>
+                    <p>The questions in this group are based on the content of a passage. After reading the passage, choose the best answer to each question. Answer all questions following the passage on the basis of what is stated or implied in the passage.</p>
+                    <p><b>Questions</b></p>
+                    <p>Schools expect textbooks to be a valuable source of information for students. My research suggests, however, that textbooks that address the place of Native Americans within the history of the United States distort history to suit a particular cultural value system. In some textbooks, for example, settlers are pictured as more humane, complex, skillful, and wise than Native Americans. In essence, textbooks stereotype and depreciate the numerous Native American cultures while reinforcing the attitude that the European conquest of the New World denotes the superiority of European cultures. Although textbooks evaluate Native American architecture, political systems, and homemaking, I contend that they do it from an ethnocentric, European perspective without recognizing that other perspectives are possible.
+                    </p>
+                    <p>One argument against my contention asserts that, by nature, textbooks are culturally biased and that I am simply underestimating children's ability to see through these biases. Some researchers even claim that by the time students are in high school, they know they cannot take textbooks literally. Yet substantial evidence exists to the contrary. Two researchers, for example, have conducted studies that suggest that children's attitudes about particular cultures are strongly influenced by the textbooks used in schools. Given this, an ongoing, careful review of how school textbooks depict Native Americans is certainly warranted.</p>
+                    <p>Which of the following would most logically be the topic of the paragraph immediately following the passage?</p>
+                    <ol>
+                      
+                    <li>Specific ways to evaluate the biases of United States history textbooks</li>
+                    <li>The centrality of the teacher's role in United States history courses</li>
+                    <li> Nontraditional methods of teaching United States history</li>
+                    <li>The contributions of European immigrants to the development of the United States</li>
+                    <li>Ways in which parents influence children's political attitudes </li>
+                    <p> <b>Answers</b>:(1)</p>
+                    </ol>
+
+                    <h3>Sample Critical Reasoning Question</h3>
+                    <p><b>Directions</b></p>
+                    <p>For this question, select the best of the answer choices given.</p>
+                    <p><b>Questions</b></p>
+                    <p>The cost of producing radios in Country Q is ten percent less than the cost of producing radios in Country Y. Even after transportation fees and tariff charges are added, it is still cheaper for a company to import radios from Country Q to Country Y than to produce radios in Country Y.
+                    </p>
+                    <p>The statements above, if true, best support which of the following assertions?</p>
+                    <p>Which of the following would most logically be the topic of the paragraph immediately following the passage?</p>
+                    <ol>
+                      
+                    <li> Labor costs in Country Q are ten percent below those in Country Y.</li>
+                    <li>Importing radios from Country Q to Country Y will eliminate ten percent of the manufacturing jobs in Country Y.</li>
+                    <li> The tariff on a radio imported from Country Q to Country Y is less than ten percent of the cost of manufacturing the radio in Country Y.</li>
+                    <li>The contributions of European immigrants to the development of the United States</li>
+                    <li>Ways in which parents influence children's political attitudes </li>
+                    <p> <b>Answers</b>:(3)</p>
+                    </ol>
+
+                   
+         	     			
+
+         </div>
+	{% endblock %}

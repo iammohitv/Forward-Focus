@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+{% block content %}
+	<style>
+	input{
+	margin-left:50px;
+	}
+	button{
+	background: #646464;
+ 
+	-webkit-border-radius: 19;
+	-moz-border-radius: 19;
+	border-radius: 19px;
+	text-shadow: 0px 6px 6px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 19px;
+	padding: 6px 21px 11px 20px;
+	text-decoration: none;
+	cursor:pointer;
+	}
+	button:hover {
+	background: #000000;
+	text-decoration: none;
+	cursor:pointer;
+	}
+	h3{font-size:15px; color: #646464;}
+	</style>
+	
+	<div class="quiz-bar ">
+	                              
+		<nav>
+			<ul class="list">
+				
+				<li>GREStyle Quiz- Reading Comprehension </a></li> 
+				<li class="active" ><a href="{%url 'quiz1' %}">GREStyle Quiz- Text Completion</a></li>
+				<li><a href="{%url 'quiz3' %}"> GREStyle Quiz- Sentence Equivalence</a></li>
+				<li><a href="{%url 'quiz4' %}"> GREStyle Quiz- Arithmetic</a></li>	
+				<li><a href="{%url 'quiz5' %}"> GREStyle Quiz- Geometry</a></li>	
+				<li><a href="{%url 'quiz6' %}"> GREStyle Quiz- Algebra</a></li>
+				<li><a href="{%url 'quiz7' %}"> GREStyle Quiz- P & C</a></li>				
+
+			</ul>
+		</nav>
+	</div>
+	<script>
+		var pos = 0, test, test_status, question, choice, choices, chA, chB, chC,chD, chE, correct = 0;
+		var questions = [
+			[ "​One of the constant sources of _________ concern for most governments is that of tax evasion. The problem lies in the fact that as a taxpayer, you know what your income is, but the revenue collector does not. So you have an incentive to _________ your income report.","A. ethical, legal","B. legal , fiscal","C. fiscal,manipulate"," D.be truthful of,manipulate"," E. fiscal, estimate","B" ],
+            [ "Antonio Bianchi is not as _________ as a director as he is under-appreciated. There is no doubt about the genius of Bianchi, but the fact that he has bid adieu to films even after the massive success of Inverno and La Barca ​is what _________ many. His absolute mastery over a narrative, where the traditional as well as the modern elements of popular cinema blend seamlessly, is matchless.​","A. understand, baffles","B. glorified,amicable","C. underrated,baffles","D. amuses,infuriates","E.amuses, baffles","A" ],
+            
+			
+		];
+		function _(x){
+			return document.getElementById(x);
+		}
+		function renderQuestion(){
+			test = _("test");
+			if(pos >= questions.length){
+				test.innerHTML = "<h3>You got "+correct+" of "+questions.length+" questions correct</h3> <h3>Answer 1. (B) fiscal and manipulate[fiscal: It should be a fiscal concern, since matters of economy can suffer when the government fails to get revenue in the form of taxes. So, “fiscal” is the right answer for the first blank., manipulate:Yes, you can “manipulate” your report by changing, editing, or hiding information. This is the right option for the second blank.] </h3><br> <h3>Answer 2. (A)  understand, baffles [underrated:  since he is not rated too low. People hold him in high esteem as a director, though he has not got the kind of appreciation he truly deserves, baffling : Yes, they can find it baffling. They might be led to wonder, “Why does he quit when he is at the peak of his career?” “Baffles” is the answer to the second blank.]</h3></br>";
+			
+				_("test_status").innerHTML = "Test Completed";
+				pos = 0;
+				correct = 0;
+				return false;
+			}
+			_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+			question = questions[pos][0];
+			chA = questions[pos][1];
+			chB = questions[pos][2];
+			chC = questions[pos][3];
+			chD = questions[pos][4];
+			chE = questions[pos][5];
+			test.innerHTML = "<h5>"+question+"</h5>";
+			test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='D'> "+chD+"<br>";
+			test.innerHTML += "<input type='radio' name='choices' value='E'> "+chE+"<br><br>";
+			test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+		}
+		function checkAnswer(){
+			choices = document.getElementsByName("choices");
+			for(var i=0; i<choices.length; i++){
+				if(choices[i].checked){
+					choice = choices[i].value;
+				}
+			}
+			if(choice == questions[pos][6]){
+				correct++;
+			}
+			pos++;
+			renderQuestion();
+		}
+		 /*$(document).ready( function() {
+				$('#deletesuccess').delay(10000).fadeOut();
+			  });*/
+		window.addEventListener("load", renderQuestion, false);
+		</script>
+	<style>
+		div#test{ border:#000 1px solid; padding:10px 10px 40px 40px; height: 500px;width: 600px; }
+		</style>
+	 <div class="about-quiz">
+      <div class="timecounter" >
+		  
+			<script type="text/javascript">
+						function countDown(secs,elem){
+							var element = document.getElementById(elem);
+							element.innerHTML = "Time-Left : "+secs+ " s";
+							if(secs < 1){
+							clearTimeout(timer);
+							
+							element.innerHTML = '<br><br><h1 style="color:black;font-family:arial;">!! Test Completed !!</h1>';
+							element.innerHTML += 'Try other Test !!';
+							
+							}
+							secs--;
+							var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+							}
+							
+		
+			</script>
+					<div id="status" ></div>
+					<script type="text/javascript">countDown(120,"status");
+                       
+                    </script>
+	 </div>
+    <h3 id="test_status"></h3>
+	<div id="test"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,121 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Index</title>
+		<link rel="stylesheet" href="{% static 'css/test1.css' %}"></link>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
+
+	</head>
+	<body>
+
+	<div class="menu-bar">
+		<nav>
+			<img class="logo" src="{% static 'Images/LOGO_SE.PNG' %}">
+		<ul>
+			<li><a href="{%url 'index' %}">Home </li>
+
+			<li><a href="#">About Us </a></li>
+			<li><a href="{%url 'login' %}">Login </a>
+			</li>
+
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+  </div>
+	<div class="main">
+		 <div class="form-style-5">
+           
+			<form action=" " method="post" style ="color: white;">
+			 {% csrf_token %}>
+
+			{% if messages %}
+			<ul class="messages">
+					{% for message in messages %}
+    				<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    				{% endfor %}
+			</ul>
+			{% endif %}
+
+
+			<fieldset>
+				<input type="text" name="field1" placeholder="First Name *" maxlength="128" style="width:200px;"><br>
+				<input type="text" name="field2" placeholder="Last Name *" maxlength="128" style="width:200px;"><br>
+				<input type="text" name="field3" placeholder="Username *" maxlength="128" style="width:200px;"><br>
+				<input type="email" name="field4" placeholder="Email *" style="width:200px; "><br>
+				<input type="password" name="field5" placeholder="Password *" style="width:200px;"><br>	
+				<input type="password" name="field6" placeholder="Confirm Password *" style="width:200px;"><br>
+			
+			<input type="submit" value="Register" style="width:200px; border-radius: 10px 10px 10px 10px; align-items: left;">
+
+		   </fieldset>
+		   </form>
+		 </div>
+			
+			<div>
+				<h4> Why ForwardFocus is your perfect learning companion? </h4> 
+				<div style="height:250px; padding-left: 200px"><img src="{%static 'Images/image1.jpg' %}" align="left" style="height: 225px; width:225px"/><p class="why_points">Start from scratch - Help with GRE, GMAT, IELTS, CAT, GATE! <br /><br />
+				<p align="center" style="font-size:120%">Prepare for GRE, GMAT, IELTS, CAT and GATE from your home at a time that is the most comfortable for you. Whether you are an early riser or a night owl, you can access your lessons,
+				practice questions, and raise doubts whenever you want!</p></p></div>
+				
+				<div style="height:250px; padding-left: 200px"><img src="{%static 'Images/image2.jpg' %}" align="left" style="height: 225px; width:225px"/><p class="why_points">We will help you evaluate your profile <br /><br />
+				<p align="center" style="font-size:120%";">Never feel alone during the preparations of your neccessary exams. Once you enroll, you will be undoubtedly get all the help and materials that you need! We will be providing
+				regular feedbacks so as to check on your progress, profile building, and a lot more!</p></p></div>
+				
+				<div style="height:250px; padding-left: 200px"><img src="{%static 'Images/image3.jpg' %}" align="left" style="height: 225px; width:225px"/><p class="why_points">Let you know what you want - Based on your personal interests/preferences <br /><br />
+				<p align="center" style="font-size:120%";">We have prepared a detailed survey, especially for you! For every student out there, studying and trying to keep in touch with their interests at the same time, we are here to hear you out!
+				With this detailed survey, we will be helping you decide your field based on your personal interests and preferences that you provide with the details!</p></p></div>
+				
+				<div style="height:250px; padding-left: 200px"><img src="{%static 'Images/image4.jpg' %}" align="left" style="height: 225px; width:225px"/><p class="why_points">A Personalized study plan <br /><br />
+				<p align="center" style="font-size:120%";">Prepare for your exam without slacking off in college! ForwardFocus aims to first understand your daily schedule, analyze your skills and then create a flexible yet rigorous study plan
+				that covers the entire syllabus, one day at a time!</p></p></div>
+				
+				<div style="height:250px; padding-left: 200px"><img src="{%static 'Images/image5.jpg' %}" align="left" style="height: 225px; width:225px"/><p class="why_points">Plenty of available materials <br /><br />
+				<p align="center" style="font-size:120%";">"Oh!, I know this!" is the best feeling in any exam! Our extensive and plentiful questionnaire banks with eBooks and PDFs, covering overall 3000 questions in GRE, GMAT,
+				IELTS, CAT, as well as GATE! It ranges across various difficulty levels to ensure you learn and master all the neccessary concepts well!</p></p></div>
+				
+				<div style="height:250px; padding-left: 200px"><img src="{%static 'Images/image6.jpg' %}" align="left" style="height: 225px; width:225px"/><p class="why_points">Detailed help with the choice in the selection of your University <br /><br />
+				<p align="center" style="font-size:120%";">Not only that, the Main Objective for us is to provide you with the Best University List selection with every detail that you may need for your consideration of the choices! We believe that with this
+				document, your life will become 100x times easier! You can opt for your preferred Country and the results will be right up, waiting for you!</p></p></div>
+			</div>
+		</div>
+	
+		<div class="footer">
+			<div class="footer-content">
+				<div class="footer-section about" style="text-align: center;">
+					<div class="logo1" style="padding-left: 580px;" >
+					
+					<img alt="logo" src="{% static 'Images/LOGO_SE.PNG' %}" style="height: 80px; width: 150px; align-content: center;">
+					
+					</div>
+					<p>
+					"Push yourself because no-one else if gonna do it for you."
+					</p>
+					<div class="contact">
+						<div>
+						<span><i class="fa fa-phone"></i> &nbsp; 8758302830</span>
+						</div>
+						<div>
+						<span><i class="fa fa-envelope-o"></i> &nbsp; forwardfocus@info.in</span>
+						</div>
+					</div>
+					<div class="socials">
+						<br>
+						<span><a href="#"><i class="fa fa-facebook-official"></i></a>&nbsp;</span>
+						<span><a href="#"><i class="fa fa-instagram"></i></a>&nbsp;</span>
+						<span><a href="#"><i class="fa fa-twitter"></i></a>&nbsp;</span>
+						<span><a href="#"><i class="fa fa-info-circle"></i></a>&nbsp;</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer-bottom">
+				&copy; forwardfocus.com | TEAM FORWARDFOCUS
+			</div>
+			</div>
+		
+		</body>
+</html>

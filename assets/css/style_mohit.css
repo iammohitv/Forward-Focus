@@ -1,0 +1,270 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h1
+{
+	font-size: 3em;
+	background-color: white;
+	color: #646464;
+	margin:0;
+	padding: 0;
+	text-align: left-center;
+	font-family: "Monotype Corsiva";
+}
+body
+{
+
+	background: #FFFFFF;
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+}
+.menu-bar
+{
+	background: #646464;
+}
+.menu-bar ul
+{
+	float :right;
+	display: inline-flex;
+	list-style:none;
+}
+.menu-bar ul li
+{
+	text-align: right;
+	width: 150px;
+	margin: 5px;
+	padding: 15px;
+
+}
+.menu-bar ul li a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.menu-bar ul li a:first child
+{
+	text-decoration: none;
+	text-indent: left;
+	color: #fff;
+}
+.menu-bar ul li a:last child
+{
+	text-decoration: none;
+	text-align-last: right;
+	color: #fff;
+}
+.active, .menu-bar ul li:hover
+{
+	background: #000000;
+	border-radius: 3px;
+}
+/*.menu-bar ul li a:hover
+{
+	color:#000000;
+}*/
+.fa fa-home
+{
+	color: #646464;
+}
+.sub-menu-1
+{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+	display:block;
+	position: absolute;
+	background-color: #646464;
+	margin-top: 15px;;
+	margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+	display:block;
+	margin: 15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+	color:#000000;
+}
+.fa-fa-angle-down
+{
+	float: right;
+}
+label
+{
+	text-align: left;
+}
+.logo
+{
+	padding: 5px 0 0 80px;
+	width: 220px;
+	height: auto;
+}
+.form-style-5{
+	max-width: 800px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+	border: none;
+}
+.form-style-5 legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+.form-style-5 label {
+	display: block;
+	margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+	background: #d2d9dd;
+}
+.form-style-5 select{
+	-webkit-appearance: menulist-button;
+	height:40px;
+}
+.form-style-5 .number {
+	background: #646464;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #646464;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #646464;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+
+{
+	background: #000000;
+}
+
+
+
+.container_resource
+{
+	width: 100%;
+	margin-top:10%;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+}
+.container_resource h2
+{
+	background: #646464;
+	color:#fff;
+	width: 200px;
+	font-size: 24px;
+	padding: 5px;
+	height: 40px;
+}
+.container_resource h2::after
+{
+	content: '';
+	border-top: 40px solid #ffffff;
+	border-right: 40px solid transparent;
+	position: relative;
+	left: 48px;
+	top : 34px;
+}
+.row
+{
+	margin-top: 30px;
+}
+img
+{
+	width: 100%;
+}
+.product-bottom h5
+{
+	font-size: 15px;
+	font-weight: bold;
+}
+.product-bottom h3
+{
+	font-size: 20px;
+	font-weight: bold;
+}

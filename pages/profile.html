@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}	
+{% block title %} My Profile {% endblock %}
+
+{% block content %}
+		<div class="profile_body">
+			<div class="profile_evaluation_container">
+				<div class="profile_evaluation">
+					<div class="text_profile">
+						<h7 class="profile_h1">FORWARD FOCUS</h7>
+					</div>
+				</div>
+				<div class="content_profile">
+					<h7 class="profile_h1">Hello {{user.username}}</h7>
+				</div>
+			</div>
+			<h3 style="background: #646464;margin-right: auto;margin-left: auto;
+				border-radius: 20px; color:white;width: 250px;font-size: 24px; text-align:center;padding: 7px;height: 40px;">Evaluation Services</h3>
+				<div class="profile_row">
+				  <div class="profile_column">
+				    <div class="profile_card">
+				      <h3 style="background: #646464;margin-right: auto;margin-left: auto;
+				border-radius: 20px; color:white;width: 280px;font-size: 24px; text-align:center;padding: 7px;height: auto;">Profile Evaluation</h3>
+				      <h7 class = "profile_h1_card"><input type ="text" value = {{exam_preffered}} /></h7>
+				      
+				    </div>
+				  </div>
+			
+				
+				  <div class="profile_column">
+				    <div class="profile_card">
+				      <h3 style="background: #646464;margin-right: auto;margin-left: auto; font-color: white; 
+				border-radius: 20px; color:white;width: 280px;font-size: 24px; text-align:center;padding: 7px;height: auto;">Score Evaluation</h3>
+				     <h7 class = "profile_h1_card"><input type ="number" style =" text-align: center;"value = "317" /></h7>
+				      
+				    </div>
+				  </div>
+				
+				
+				  <div class="profile_column">
+				    <div class="profile_card">
+				       <h3 style="background: #646464;margin-right: auto;margin-left: auto;
+				border-radius: 20px; color:white;width: 280px;font-size: 24px; text-align:center;padding: 7px;height: auto;">Take Quick Quiz</h3>
+				      <ul>
+							<li><a href="{%url 'quiz1' %}">GRE</a></li>
+							<li><a href="#">CAT</a></li>
+							<li><a href="#">GATE</a></li>
+							<li><a href="#">IELTS</a></li>
+						</ul>
+				    </div>
+				    </div>
+				  </div>
+				
+				{% endblock %}
